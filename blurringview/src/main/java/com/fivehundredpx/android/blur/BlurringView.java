@@ -20,7 +20,7 @@ import android.view.View;
  * Use {@link #setBlurredView(android.view.View)} to set up the reference to the view to be blurred.
  * After that, call {@link #invalidate()} to trigger blurring whenever necessary.
  */
-public class BlurringView extends View {
+public class BlurringView extends RelativeLayout {
 
     public BlurringView(Context context) {
         this(context, null);
@@ -42,6 +42,9 @@ public class BlurringView extends View {
                 defaultDownsampleFactor));
         setOverlayColor(a.getColor(R.styleable.PxBlurringView_overlayColor, defaultOverlayColor));
         a.recycle();
+		
+		setWillNotDraw(false);
+		invalidate();
     }
 
     public void setBlurredView(View blurredView) {
