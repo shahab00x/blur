@@ -8,7 +8,7 @@ Define via Gradle:
 
 ``` groovy
 repositories {
-    maven { url 'https://github.com/500px/500px-android-blur/raw/master/releases/' }
+    maven { url 'https://github.com/shahab00x/blur/raw/master/releases/' }
 }
 
 dependencies {
